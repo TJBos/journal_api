@@ -15,3 +15,271 @@ Migrating to CreateEntries (20201206205905)
   [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4835719781733306690)[0m
   [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-12-06 17:47:44 -0600
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.5ms | Allocations: 478)
+Completed 200 OK in 48ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 2616)
+
+
+Started GET "/entries" for ::1 at 2020-12-06 17:47:49 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (4.5ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 5.3ms | ActiveRecord: 7.2ms | Allocations: 2069)
+
+
+Started POST "/entries" for ::1 at 2020-12-06 17:53:56 -0600
+Processing by EntriesController#create as */*
+  Parameters: {"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true, "entry"=>{"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true}}
+[31mUnpermitted parameters: :question2, :question3, :question4, :question5, :question6[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[36mEntry Create (21.1ms)[0m  [1m[32mINSERT INTO "entries" ("main", "question1", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["main", "Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip."], ["question1", "not quite sure about it"], ["created_at", "2020-12-06 23:53:56.474398"], ["updated_at", "2020-12-06 23:53:56.474398"]]
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+Completed 201 Created in 74ms (Views: 1.5ms | ActiveRecord: 41.6ms | Allocations: 9936)
+
+
+Started PUT "/entries" for ::1 at 2020-12-06 17:55:09 -0600
+  
+ActionController::RoutingError (No route matches [PUT] "/entries"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/entries/1" for ::1 at 2020-12-06 17:55:22 -0600
+Processing by EntriesController#update as */*
+  Parameters: {"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true, "date"=>"2020-12-05", "id"=>"1", "entry"=>{"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "date"=>"2020-12-05", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true}}
+  [1m[36mEntry Load (4.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+[31mUnpermitted parameters: :question2, :question3, :question4, :question5, :question6[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:29:in `update'
+  [1m[36mEntry Update (12.0ms)[0m  [1m[33mUPDATE "entries" SET "date" = $1, "updated_at" = $2 WHERE "entries"."id" = $3[0m  [["date", "2020-12-05"], ["updated_at", "2020-12-06 23:55:22.494624"], ["id", 1]]
+  ↳ app/controllers/entries_controller.rb:29:in `update'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:29:in `update'
+Completed 200 OK in 81ms (Views: 0.8ms | ActiveRecord: 19.1ms | Allocations: 4933)
+
+
+Started GET "/entries" for ::1 at 2020-12-06 17:55:41 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1020)
+
+
+Started POST "/entries" for ::1 at 2020-12-06 17:58:16 -0600
+Processing by EntriesController#create as */*
+  Parameters: {"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true, "date"=>"2020-12-05", "entry"=>{"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "date"=>"2020-12-05", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true}}
+[31mUnpermitted parameters: :question2, :question3, :question4, :question5, :question6[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[36mEntry Create (1.9ms)[0m  [1m[32mINSERT INTO "entries" ("main", "date", "question1", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["main", "Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip."], ["date", "2020-12-05"], ["question1", "not quite sure about it"], ["created_at", "2020-12-06 23:58:16.366369"], ["updated_at", "2020-12-06 23:58:16.366369"]]
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 0.6ms | ActiveRecord: 7.3ms | Allocations: 2670)
+
+
+Started DELETE "/entries/1" for ::1 at 2020-12-06 17:59:48 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true, "date"=>"2020-12-05", "id"=>"1", "entry"=>{"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "date"=>"2020-12-05", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true}}
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[36mEntry Destroy (0.9ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+Completed 204 No Content in 16ms (ActiveRecord: 2.6ms | Allocations: 2492)
+
+
+Started DELETE "/entries/1" for ::1 at 2020-12-06 18:00:08 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (1.0ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms | Allocations: 654)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Entry with 'id'=1):
+  
+app/controllers/entries_controller.rb:44:in `set_entry'
+Started DELETE "/entries/2" for ::1 at 2020-12-06 18:00:16 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[36mEntry Destroy (4.7ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+Completed 204 No Content in 15ms (ActiveRecord: 8.0ms | Allocations: 2465)
+
+
+Started POST "/entries/" for ::1 at 2020-12-06 18:01:02 -0600
+Processing by EntriesController#create as */*
+  Parameters: {"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true, "entry"=>{"main"=>"Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip.", "question1"=>"not quite sure about it", "question2"=>"this is my answer", "question3"=>"I do not have all the answers", "question4"=>true, "question5"=>false, "question6"=>true}}
+[31mUnpermitted parameters: :question2, :question3, :question4, :question5, :question6[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[36mEntry Create (0.7ms)[0m  [1m[32mINSERT INTO "entries" ("main", "question1", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["main", "Bacon ipsum dolor amet swine tenderloin doner kevin shank spare ribs filet mignon bacon flank chicken beef pork. Landjaeger sirloin meatloaf corned beef bacon short loin rump. Ham prosciutto cupim brisket chislic strip steak salami t-bone biltong ribeye pig beef kielbasa drumstick venison. Alcatra meatball bresaola bacon cow pork belly swine meatloaf frankfurter prosciutto hamburger pork chop t-bone capicola porchetta. Spare ribs strip steak sausage tri-tip fatback shoulder pork belly ribeye capicola, hamburger pork chop pancetta meatloaf short ribs tongue. Leberkas salami pig, ground round pastrami turducken boudin sirloin hamburger chuck drumstick shoulder pork chop kielbasa. Sirloin filet mignon spare ribs, shank flank pork frankfurter turducken meatloaf landjaeger pork loin cow shankle prosciutto ball tip."], ["question1", "not quite sure about it"], ["created_at", "2020-12-07 00:01:02.098404"], ["updated_at", "2020-12-07 00:01:02.098404"]]
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+Completed 201 Created in 21ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 2631)
+
+
+Started POST "/entries/" for ::1 at 2020-12-06 18:04:30 -0600
+Processing by EntriesController#create as */*
+  Parameters: {"main"=>"blablablablabla", "date"=>"2020-12-05", "question1"=>"do not want to answer", "question2"=>"just typing nonsense", "question3"=>"and some more", "question4"=>true, "question5"=>false, "question6"=>true, "entry"=>{"main"=>"blablablablabla", "date"=>"2020-12-05", "question1"=>"do not want to answer", "question2"=>"just typing nonsense", "question3"=>"and some more", "question4"=>true, "question5"=>false, "question6"=>true}}
+[31mUnpermitted parameters: :question2, :question3, :question4, :question5, :question6[0m
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[36mEntry Create (1.7ms)[0m  [1m[32mINSERT INTO "entries" ("main", "date", "question1", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["main", "blablablablabla"], ["date", "2020-12-05"], ["question1", "do not want to answer"], ["created_at", "2020-12-07 00:04:30.255939"], ["updated_at", "2020-12-07 00:04:30.255939"]]
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 0.9ms | ActiveRecord: 11.0ms | Allocations: 2670)
+
+
+Started GET "/entries" for ::1 at 2020-12-06 18:05:33 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.9ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 1185)
+
+
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEntry Create (0.9ms)[0m  [1m[32mINSERT INTO "entries" ("main", "date", "question1", "question2", "question5", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["main", "here is some text"], ["date", "2020-12-13"], ["question1", "answer"], ["question2", "more answers"], ["question5", true], ["created_at", "2020-12-07 00:09:43.999291"], ["updated_at", "2020-12-07 00:09:43.999291"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/entries" for ::1 at 2020-12-06 18:10:15 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (0.9ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 24.4ms | ActiveRecord: 9.2ms | Allocations: 9618)
+
+
+Started PUT "/entries/5" for ::1 at 2020-12-06 18:11:49 -0600
+Processing by EntriesController#update as */*
+  Parameters: {"id"=>"5", "main"=>"here is some text", "date"=>"2020-12-13", "question1"=>"answer", "question2"=>"more answers", "question3"=>"on a roll", "question4"=>false, "question5"=>true, "question6"=>true, "entry"=>{"id"=>"5", "main"=>"here is some text", "date"=>"2020-12-13", "question1"=>"answer", "question2"=>"more answers", "question3"=>"on a roll", "question4"=>false, "question5"=>true, "question6"=>true}}
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+[31mUnpermitted parameters: :id, :question2, :question3, :question4, :question5, :question6[0m
+Completed 200 OK in 84ms (Views: 4.7ms | ActiveRecord: 1.0ms | Allocations: 2846)
+
+
+Started DELETE "/entries/5" for ::1 at 2020-12-06 18:12:21 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEntry Load (0.9ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[36mEntry Destroy (4.1ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+Completed 204 No Content in 22ms (ActiveRecord: 6.8ms | Allocations: 2501)
+
+
+Started DELETE "/entries/4" for ::1 at 2020-12-06 18:12:24 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[36mEntry Destroy (0.7ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 3.4ms | Allocations: 2450)
+
+
+Started DELETE "/entries/3" for ::1 at 2020-12-06 18:12:28 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mEntry Load (1.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[36mEntry Destroy (2.0ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/entries_controller.rb:38:in `destroy'
+Completed 204 No Content in 19ms (ActiveRecord: 10.9ms | Allocations: 2466)
+
+
+Started DELETE "/entries/2" for ::1 at 2020-12-06 18:12:31 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mEntry Load (0.9ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.9ms | Allocations: 654)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Entry with 'id'=2):
+  
+app/controllers/entries_controller.rb:44:in `set_entry'
+Started DELETE "/entries/1" for ::1 at 2020-12-06 18:12:34 -0600
+Processing by EntriesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/entries_controller.rb:44:in `set_entry'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms | Allocations: 663)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Entry with 'id'=1):
+  
+app/controllers/entries_controller.rb:44:in `set_entry'
+Started GET "/entries" for ::1 at 2020-12-07 13:50:32 -0600
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (1.6ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 6.1ms | ActiveRecord: 8.8ms | Allocations: 2015)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEntry Create (61.9ms)[0m  [1m[32mINSERT INTO "entries" ("main", "date", "question1", "question2", "question5", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["main", "here is some text"], ["date", "2020-12-13"], ["question1", "answer"], ["question2", "more answers"], ["question5", true], ["created_at", "2020-12-07 19:50:56.998882"], ["updated_at", "2020-12-07 19:50:56.998882"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/entries" for ::1 at 2020-12-07 13:51:50 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mEntry Load (3.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  ↳ app/controllers/entries_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 51.2ms | ActiveRecord: 12.2ms | Allocations: 8112)
+
+

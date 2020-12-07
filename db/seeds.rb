@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Entry.create([
+    { main: "here is some text", date: "2020-12-13", question1: "answer", question2: "more answers", question5: true}
+])
+
