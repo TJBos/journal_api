@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Entry.create([
-    { main: "here is some text", date: "2020-12-13", question1: "answer", question2: "more answers", question5: true}
+    { main: "no way man", date: "2020-12-10", question1: "relax", question2: "don't want to", question5: true, question6: false}
 ])
 
