@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
-  before_action :authorized
   before_action :set_entry, only: [:show, :update, :destroy]
+  before_action :authorized
 
   # GET /entries
   def index
@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
   # POST /entries
   def create
     @entry = Entry.new(entry_params)
-    @note.user_id = @user.id
+    @entry.user_id = @user.id
 
     if @entry.save
       render json: @entry, status: :created, location: @entry
