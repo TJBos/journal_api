@@ -2357,3 +2357,393 @@ Processing by EntriesController#index as */*
 Completed 200 OK in 30ms (Views: 12.5ms | ActiveRecord: 2.7ms | Allocations: 2519)
 
 
+Started GET "/" for ::1 at 2020-12-11 11:56:42 -0600
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.9ms | Allocations: 315)
+Completed 200 OK in 41ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 1594)
+
+
+Started GET "/entries" for ::1 at 2020-12-11 11:56:49 -0600
+Processing by EntriesController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Started GET "/entries" for ::1 at 2020-12-11 11:56:49 -0600
+Processing by EntriesController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 11:59:43 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 11.6ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 11:59:50 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:00:03 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:00:06 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:00:09 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:00:10 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:00:13 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:00:57 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:01:01 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:01:09 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:01:13 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:03:07 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:03:10 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/login" for ::1 at 2020-12-11 12:03:16 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 374ms (Views: 0.7ms | ActiveRecord: 21.1ms | Allocations: 4635)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:03:16 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:03:23 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:03:24 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:03:53 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:04:13 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/login" for ::1 at 2020-12-11 12:04:24 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"toon", "password"=>"[FILTERED]", "user"=>{"username"=>"toon"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toon"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 339ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 897)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:04:24 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:04:24 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[36mEntry Load (1.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/entries_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 30.6ms | ActiveRecord: 7.0ms | Allocations: 10124)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:04:33 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:04:34 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/" for ::1 at 2020-12-11 12:05:26 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.3ms | Allocations: 196)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 729)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:11:38 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:11:42 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/login" for ::1 at 2020-12-11 12:11:47 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"toon", "password"=>"[FILTERED]", "user"=>{"username"=>"toon"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toon"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 338ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 973)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:11:47 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:11:54 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:11:55 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 12:12:29 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mEntry Load (0.8ms)[0m  [1m[34mSELECT "entries".* FROM "entries" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2020-12-11 16:46:14 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 591ms (Views: 0.6ms | ActiveRecord: 27.7ms | Allocations: 4670)
+
+
+Started POST "/signup" for ::1 at 2020-12-11 16:46:48 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-11 16:50:22 -0600
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test3", "password"=>"[FILTERED]", "user"=>{"username"=>"test3"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (49.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test3"], ["password_digest", "$2a$12$ljC9ktTMhCPl8uvgyjvqWeKsX5g//Ofad7pjnLHjztcqQVzZ7kfWS"], ["created_at", "2020-12-11 22:50:22.869361"], ["updated_at", "2020-12-11 22:50:22.869361"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (80.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 703ms (Views: 0.6ms | ActiveRecord: 130.8ms | Allocations: 3081)
+
+
+Started POST "/login" for ::1 at 2020-12-11 16:51:42 -0600
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"test3", "password"=>"[FILTERED]", "user"=>{"username"=>"test3"}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 699ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 907)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 16:56:10 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 164)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 17:03:57 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 17:04:55 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 17:05:05 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 17:05:15 -0600
+Processing by EntriesController#index as */*
+  Parameters: {"entry"=>{}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/entries/" for ::1 at 2020-12-11 17:05:41 -0600
+Processing by EntriesController#index as HTML
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-12-11 17:05:42 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-11 17:07:12 -0600
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"new", "password"=>"[FILTERED]", "user"=>{"username"=>"new"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (16.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "new"], ["password_digest", "$2a$12$A2JTcS1CgdnE.PqMIg4yj.Zd.5yKeYJzf81V191bZLrGmsZ1gwDU6"], ["created_at", "2020-12-11 23:07:13.309002"], ["updated_at", "2020-12-11 23:07:13.309002"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 486ms (Views: 0.4ms | ActiveRecord: 19.6ms | Allocations: 2848)
+
+
